@@ -1,9 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание Мед Студио</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img src="" alt="логотип" class="header__logo" />
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Расписание</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Курсы</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Проекты</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Медиатека</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">О проекте</a></li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link"><img src="assets/img/ms-club.png" alt="ms club" /></a>
+            </li>
+          </ul>
+        </nav>
+        <a href="" class="">Личный кабинет</a>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container"></div>
+    </section>
+    <section class="course">
+      <div class="container">
+        <p class="course__description"></p>
+        <div class="course__programm">
+          <h2 class="course__programm-title">Программа курса</h2>
+          <div class="course__programm-theory"></div>
+          <div class="course__programm-practice"></div>
+          <div class="course__programm-final"></div>
+        </div>
+        <div class="course__payment-card">
+          <h3 class="course__payment-title"></h3>
+          <p class="course__payment-description">
+            <a href="" class="course__payment-docs">документы</a>
+          </p>
+          <button class="course__payment-btn"></button>
+          <a href="#discount" class="course__payment-discount"></a>
+        </div>
+      </div>
+    </section>
+    <section class="discount" id="discount">
+      <div class="container">
+        <p class="discount__subtitle">Подарок</p>
+        <h2 class="discount__title">Даём скидку 10% за просмотр материала партнёров</h2>
+        <p class="discount__description">
+          Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было
+          показано выше, природа гамма-всплексов вызывает болид.
+        </p>
+        <video
+          class="discount__video"
+          controls
+          muted
+          poster="thumbnail.jpg"
+          width="100%"
+          height="auto"
+          preload="metadata"
+          style="max-width: 800px; margin: 20px auto; display: block"
+        >
+          <!-- Несколько источников для кросс-браузерности -->
+          <source src="video/webm/my-video.webm" type="video/webm" />
+          <source src="video/mp4/my-video.mp4" type="video/mp4" />
+          <source src="video/ogg/my-video.ogg" type="video/ogg" />
+          <!-- Фолбек при отсутствии поддержки HTML5 видео в браузере -->
+          <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+          <p>
+            Ваш браузер не поддерживает HTML5 видео
+            <a href="my-video.mp4">Скачать видео</a>
+            .
+          </p>
+        </video>
+      </div>
+    </section>
+    <section class="speakers">
+      <div class="container">
+        <h2 class="speakers__title">Спикеры</h2>
+        <div class="speakers__cards">
+          <div class="speakers__card">
+            <img src="assets/img/speaker-profile-pic1.png" alt="спикер" class="speakers__img" />
+            <div class="speakers__card-text">
+              <h3 class="speakers__name">Константинопольский Константин Константинович</h3>
+              <p class="speakers__description">
+                Главный внештатный специалист Минздрава России по управлению сестринской деятельностью, главная
+                медицинская сестра ФГБУ «HMXЦ им. Н.И. Пирогова» Минздрава России, доцент кафедры управления сестринской
+                деятельностью и социальной работы Первого МГМУ им. И.М. Сеченова, к.м.н.
+              </p>
+            </div>
+          </div>
+          <div class="speakers__card">
+            <img src="assets/img/speaker-profile-pic2.png" alt="спикер" class="speakers__img" />
+            <div class="speakers__card-text">
+              <h3 class="speakers__name">Елисеева Дарья Дмитриевна</h3>
+              <p class="speakers__description">
+                Главный внештатный специалист Минздрава России по управлению сестринской деятельностью, главная
+                медицинская сестра ФГБУ «HMXЦ им. Н.И. Пирогова»
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sponsors">
+      <div class="container">
+        <h2 class="sponsors__title">Спонсоры</h2>
+        <div class="sponsors__cards">
+          <div class="sponsors__card">
+            <img src="assets/img/sponsor-1.png" alt="логотип спонсора" class="sponsors__logo" />
+          </div>
+          <div class="sponsors__card">
+            <img src="assets/img/sponsor-2.png" alt="логотип спонсора" class="sponsors__logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <div class="container">
+        <h2 class="partners__title">Партнёры</h2>
+        <div class="partners__cards">
+          <div class="partners__card">
+            <img src="assets/img/Bayer 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+          </div>
+          <div class="partners__card">
+            <img src="assets/img/BMS 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+          </div>
+          <div class="partners__card">
+            <img src="assets/img/Amgen 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
+<!-- Нужно ли скрипт добавить в хед с дефер или в конце боди? -->
+<!-- Заказать решение на бирже фриланс? -->
+<!-- Как стоит добавить щрифты, как решить с ними проблему? -->
+<!-- Стоит ли экспортировать картинки из фигмы только в СВГ или в ПНГ-ЖПЕГ -->
+<!-- Что стоит делать с картинками для подгрузки, какие фолбеки есть для адаптивности -->
+<!-- Пиксель-перфект расширение? -->
