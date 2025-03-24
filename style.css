@@ -1,5 +1,120 @@
-* {
-  margin: 0;
-  padding: 0;
+/* CSS сброс "Modern CSS Reset" https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea:not([rows]) {
+  min-height: 10em;
+}
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Layout */
+body {
+  background-color: #f3f7f9;
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+}
+
+/* Utility */
+.container {
+  width: 83%;
+  max-width: 75.5rem; /* 1208 пикселей - максимальная ширина, весь сайт по центру из макета */
+  margin: 0 auto;
+}
+
+/* Спикеры */
+.speakers__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Спонсоры */
+.sponsors__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Партнеры */
+.partners__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.partners__card {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Медиа мобильный */
+@media (min-width: 768px) {
+}
+
+/* Медиа планшет */
+@media (min-width: 1024px) {
 }
