@@ -20,7 +20,6 @@ img,
 picture,
 video {
   max-width: 100%;
-  display: block;
 }
 
 /* Layout */
@@ -37,36 +36,100 @@ body {
   margin: 0 auto;
 }
 
-/* Спикеры */
-.speakers__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+/* Header */
+.header__logo {
+  max-width: 112px;
+  height: 32px;
 }
 
-/* Спонсоры */
-.sponsors__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+/* Main */
+.main {
+  background-color: #4299e1;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
 }
-
-/* Партнеры */
-.partners__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+.main__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
 }
-
-.partners__card {
-  background: white;
+.main__content {
+  position: relative;
+  z-index: 10;
+}
+.main__header {
   margin-bottom: 1rem;
-  padding: 1rem 2rem;
-  display: grid;
-  place-items: center;
+}
+.main__header-icon {
+  font-size: 1.25rem;
+}
+.main__header-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.main__info {
+  margin-bottom: 1.5rem;
+}
+.main__info-item {
+  margin-right: 1rem;
+  font-size: 0.875rem;
+}
+.main__info-icon {
+  margin-right: 0.25rem;
+}
+.main__badge {
+  background-color: white;
+  color: #4299e1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.main__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.main__buttons {
+  margin-bottom: 1rem;
+}
+.main__button {
+  background-color: white;
+  color: #4299e1;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.main__button--black {
+  background-color: black;
+  color: white;
+}
+.main__button--icon {
+  display: flex;
+  align-items: center;
+}
+.main__button-icon {
+  margin-right: 0.5rem;
+}
+.main__logo {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 6rem;
+  height: auto;
 }
 
-/* Программа курса */
+/* Программа курса - course+program */
 .program {
   max-width: 42rem;
   margin: 0 auto;
@@ -91,9 +154,6 @@ body {
   font-weight: 600;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .program__section-icon {
@@ -105,31 +165,22 @@ body {
   transform: rotate(-180deg);
 }
 
-.program__lectures {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 .program__lectures--hidden {
   display: none;
 }
 
 .program__lecture {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   gap: 1rem;
 }
 
 .program__lecture-image-container {
   position: relative;
-  border-radius: 0.25rem;
 }
 
-.program__lecture-image {
+.program__lecture-video {
   border-radius: 0.5rem;
-  width: 120px;
-  height: 72px;
 }
 
 .program__lecture-icon {
@@ -142,10 +193,6 @@ body {
 
 .program__lecture-lock-icon {
   font-size: 1.5rem;
-}
-
-.program__lecture-content {
-  flex-grow: 1;
 }
 
 .program__lecture-title {
@@ -162,8 +209,6 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
 }
 
@@ -173,14 +218,14 @@ body {
 }
 
 .program__final-details {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   gap: 1rem;
 }
 
 .program__final-detail {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   gap: 0.5rem;
 }
 
@@ -240,4 +285,33 @@ body {
   color: #40b526;
   text-align: center;
   text-decoration: none;
+}
+
+/* Спикеры */
+.speakers__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Спонсоры */
+.sponsors__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Партнеры */
+.partners__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.partners__card {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  display: grid;
+  place-items: center;
 }
