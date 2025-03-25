@@ -1,0 +1,220 @@
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Программа курса</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f9fafb;
+        padding: 1rem;
+        font-family: 'Roboto', sans-serif;
+      }
+      .course-program {
+        max-width: 42rem;
+        margin: 0 auto;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      .course-program__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .course-program__section {
+        margin-bottom: 1.5rem;
+      }
+      .course-program__section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .course-program__lectures {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .course-program__lecture {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .course-program__lecture-image-container {
+        position: relative;
+        border-radius: 0.25rem;
+      }
+      .course-program__lecture-image {
+        border-radius: 0.5rem;
+        width: 120px;
+        height: 72px;
+      }
+      .course-program__lecture-icon {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .course-program__lecture-content {
+        flex-grow: 1;
+      }
+      .course-program__lecture-title {
+        font-weight: 600;
+      }
+      .course-program__final {
+        border: 1px solid #94a9b7;
+        padding: 1rem;
+        border-radius: 1.25rem;
+      }
+      .course-program__final-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .course-program__final-description {
+        color: #6b7280;
+        margin-bottom: 1rem;
+      }
+      .course-program__final-details {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .course-program__final-detail {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .fa-chevron-down {
+        transition: all 0.1s ease-in;
+        color: #40b526;
+      }
+      .rotate-minus-180 {
+        transform: rotate(-180deg);
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-program">
+      <h1 class="course-program__title">Программа курса</h1>
+      <div class="course-program__section">
+        <h2 class="course-program__section-title">
+          Часть 1. Теоретическая часть
+          <i class="fas fa-chevron-down"></i>
+        </h2>
+        <div class="course-program__lectures">
+          <div class="course-program__lecture">
+            <div class="course-program__lecture-image-container">
+              <img
+                alt="Лектор 2"
+                class="course-program__lecture-image"
+                height="50"
+                src="https://storage.googleapis.com/a1aa/image/qdDSx5KSkrUiDC7fiGGXpg78VWNaUVEcPsCU57wtpiY.jpg"
+                width="50"
+              />
+              <i class="course-program__lecture-icon fas fa-lock"></i>
+            </div>
+            <div class="course-program__lecture-content">
+              <p class="course-program__lecture-title">
+                Лекция 2. Энтервекостомия как базовый метод лечения гемангиом шейки
+              </p>
+            </div>
+          </div>
+
+          <div class="course-program__lecture">
+            <div class="course-program__lecture-image-container">
+              <img
+                alt="Лектор 3"
+                class="course-program__lecture-image"
+                height="50"
+                width="50"
+                src="https://storage.googleapis.com/a1aa/image/EsQz4sNBjtm8mBZSbYzmfTGuX5LwC26JqdmD-uJ5lbM.jpg"
+              />
+              <i class="course-program__lecture-icon fas fa-lock"></i>
+            </div>
+            <div class="course-program__lecture-content">
+              <p class="course-program__lecture-title">
+                Лекция 3. Проведение прокрификации кома при завершении энтервекостомии и дальнейшее симптоматическое
+                лечение
+              </p>
+            </div>
+          </div>
+          <div class="course-program__lecture">
+            <div class="course-program__lecture-image-container">
+              <img
+                alt="Лектор 4"
+                class="course-program__lecture-image"
+                height="50"
+                width="50"
+                src="https://storage.googleapis.com/a1aa/image/Ks2ZmPxy0j95kRhP_w1EjTc0lDHgnBuEUh3MZQFf51A.jpg"
+              />
+              <i class="course-program__lecture-icon fas fa-globe course-program__lecture-icon--globe"></i>
+            </div>
+            <div class="course-program__lecture-content">
+              <p class="course-program__lecture-title">Онлайн-трансляция со всеми спикерами</p>
+            </div>
+            <i class="course-program__lecture-icon fas fa-lock"></i>
+          </div>
+        </div>
+      </div>
+      <div class="course-program__section">
+        <h2 class="course-program__section-title">
+          Часть 2. Практическая часть
+          <i class="fas fa-chevron-down rotate-minus-180"></i>
+        </h2>
+        <div class="course-program__lectures hidden"></div>
+      </div>
+      <div class="course-program__section">
+        <h2 class="course-program__section-title">
+          Часть 3. Финал
+          <i class="fas fa-chevron-down rotate-minus-180"></i>
+        </h2>
+        <div class="course-program__lectures hidden"></div>
+      </div>
+      <div class="course-program__final">
+        <h2 class="course-program__final-title">
+          <i class="fas fa-award"></i>
+          Часть 4. Итоговый контроль
+        </h2>
+        <p class="course-program__final-description">Доступно после прохождения курса</p>
+        <div class="course-program__final-details">
+          <div class="course-program__final-detail">
+            <i class="fas fa-question-circle"></i>
+            <span>Вопросов: 30</span>
+          </div>
+          <div class="course-program__final-detail">
+            <i class="fas fa-clock"></i>
+            <span>Время: 60 мин</span>
+          </div>
+          <div class="course-program__final-detail">
+            <i class="fas fa-sync-alt"></i>
+            <span>Попыток: 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.course-program__section-title').forEach(title => {
+        title.addEventListener('click', () => {
+          const icon = title.querySelector('.fa-chevron-down')
+          const lectures = title.nextElementSibling
+          icon.classList.toggle('rotate-minus-180')
+          lectures.classList.toggle('hidden')
+        })
+      })
+    </script>
+  </body>
+</html>
