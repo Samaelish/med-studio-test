@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание Мед Студио</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -31,20 +33,198 @@
     </section>
     <section class="course">
       <div class="container">
-        <p class="course__description"></p>
-        <div class="course__programm">
-          <h2 class="course__programm-title">Программа курса</h2>
-          <div class="course__programm-theory"></div>
-          <div class="course__programm-practice"></div>
-          <div class="course__programm-final"></div>
+        <p class="course__description">
+          Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было
+          показано выше, природа гамма-всплексов вызывает болид. Вселенная достаточно огромна, чтобы аномальная джетовая
+          активность последовательно оценивает центральный параметр. Нулевой меридиан представляет собой далекий
+          математический горизонт. Хотя хpонологи не увеpены, им кажется, что декретное время вызывает лимб. У
+          планет-гигантов нет твёрдой поверхности, таким образом астероид прочно оценивает натуральный логарифм.
+        </p>
+        <div class="program">
+          <h1 class="program__title">Программа курса</h1>
+          <div class="program__section">
+            <h2 class="program__section-title">
+              Часть 1. Теоретическая часть
+              <i class="program__section-icon fas fa-chevron-down"></i>
+            </h2>
+            <div class="program__lectures">
+              <div class="program__lecture">
+                <div class="program__lecture-image-container">
+                  <video
+                    class="program__lecture-image"
+                    controls
+                    muted
+                    poster="thumbnail.jpg"
+                    width="100%"
+                    height="auto"
+                    preload="metadata"
+                    style="max-width: 800px; margin: 20px auto; display: block"
+                  >
+                    <!-- Несколько источников для кросс-браузерности -->
+                    <source src="video/webm/my-video.webm" type="video/webm" />
+                    <source src="video/mp4/my-video.mp4" type="video/mp4" />
+                    <source src="video/ogg/my-video.ogg" type="video/ogg" />
+                    <!-- Фолбек при отсутствии поддержки HTML5 видео в браузере -->
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+                    <p>
+                      Ваш браузер не поддерживает HTML5 видео
+                      <a href="my-video.mp4">Скачать видео</a>
+                      .
+                    </p>
+                  </video>
+                </div>
+                <p class="program__lecture-title">
+                  Лекция 1. Что такое резекция лазером и в чём преимущество энтервектоскопии для лечения бесплодия
+                </p>
+              </div>
+              <div class="program__lecture">
+                <div class="program__lecture-image-container">
+                  <video
+                    class="program__lecture-image"
+                    controls
+                    muted
+                    poster="thumbnail.jpg"
+                    width="100%"
+                    height="auto"
+                    preload="metadata"
+                    style="max-width: 800px; margin: 20px auto; display: block"
+                  >
+                    <!-- Несколько источников для кросс-браузерности -->
+                    <source src="video/webm/my-video.webm" type="video/webm" />
+                    <source src="video/mp4/my-video.mp4" type="video/mp4" />
+                    <source src="video/ogg/my-video.ogg" type="video/ogg" />
+                    <!-- Фолбек при отсутствии поддержки HTML5 видео в браузере -->
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+                    <p>
+                      Ваш браузер не поддерживает HTML5 видео
+                      <a href="my-video.mp4">Скачать видео</a>
+                      .
+                    </p>
+                  </video>
+                  <i class="program__lecture-icon fas fa-lock"></i>
+                </div>
+                <div class="program__lecture-content">
+                  <p class="program__lecture-title">
+                    Лекция 2. Энтервекостомия как базовый метод лечения гемангиом шейки
+                  </p>
+                </div>
+              </div>
+              <div class="program__lecture">
+                <div class="program__lecture-image-container">
+                  <video
+                    class="program__lecture-image"
+                    controls
+                    muted
+                    poster="thumbnail.jpg"
+                    width="100%"
+                    height="auto"
+                    preload="metadata"
+                    style="max-width: 800px; margin: 20px auto; display: block"
+                  >
+                    <!-- Несколько источников для кросс-браузерности -->
+                    <source src="video/webm/my-video.webm" type="video/webm" />
+                    <source src="video/mp4/my-video.mp4" type="video/mp4" />
+                    <source src="video/ogg/my-video.ogg" type="video/ogg" />
+                    <!-- Фолбек при отсутствии поддержки HTML5 видео в браузере -->
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+                    <p>
+                      Ваш браузер не поддерживает HTML5 видео
+                      <a href="my-video.mp4">Скачать видео</a>
+                      .
+                    </p>
+                  </video>
+                  <i class="program__lecture-icon fas fa-lock"></i>
+                </div>
+                <div class="program__lecture-content">
+                  <p class="program__lecture-title">
+                    Лекция 3. Проведение прокрификации кома при завершении энтервекостомии и дальнейшее симптоматическое
+                    лечение
+                  </p>
+                </div>
+              </div>
+              <div class="program__lecture">
+                <div class="program__lecture-image-container">
+                  <video
+                    class="program__lecture-image"
+                    controls
+                    muted
+                    poster="thumbnail.jpg"
+                    width="100%"
+                    height="auto"
+                    preload="metadata"
+                    style="max-width: 800px; margin: 20px auto; display: block"
+                  >
+                    <!-- Несколько источников для кросс-браузерности -->
+                    <source src="video/webm/my-video.webm" type="video/webm" />
+                    <source src="video/mp4/my-video.mp4" type="video/mp4" />
+                    <source src="video/ogg/my-video.ogg" type="video/ogg" />
+                    <!-- Фолбек при отсутствии поддержки HTML5 видео в браузере -->
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+                    <p>
+                      Ваш браузер не поддерживает HTML5 видео
+                      <a href="my-video.mp4">Скачать видео</a>
+                      .
+                    </p>
+                  </video>
+                  <i class="program__lecture-icon fas fa-globe program__lecture-icon--globe"></i>
+                </div>
+                <div class="program__lecture-content">
+                  <p class="program__lecture-title">Онлайн-трансляция со всеми спикерами</p>
+                </div>
+                <i class="program__lecture-lock-icon fas fa-lock"></i>
+              </div>
+            </div>
+          </div>
+          <div class="program__section">
+            <h2 class="program__section-title">
+              Часть 2. Практическая часть
+              <i class="program__section-icon program__section-icon--rotated fas fa-chevron-down"></i>
+            </h2>
+            <div class="program__lectures program__lectures--hidden"></div>
+          </div>
+          <div class="program__section">
+            <h2 class="program__section-title">
+              Часть 3. Финал
+              <i class="program__section-icon program__section-icon--rotated fas fa-chevron-down"></i>
+            </h2>
+            <div class="program__lectures program__lectures--hidden"></div>
+          </div>
+          <div class="program__final">
+            <h2 class="program__final-title">
+              <i class="fas fa-award"></i>
+              Часть 4. Итоговый контроль
+            </h2>
+            <p class="program__final-description">Доступно после прохождения курса</p>
+            <div class="program__final-details">
+              <div class="program__final-detail">
+                <i class="fas fa-question-circle"></i>
+                <span>Вопросов: 30</span>
+              </div>
+              <div class="program__final-detail">
+                <i class="fas fa-clock"></i>
+                <span>Время: 60 мин</span>
+              </div>
+              <div class="program__final-detail">
+                <i class="fas fa-sync-alt"></i>
+                <span>Попыток: 2</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="course__payment-card">
-          <h3 class="course__payment-title"></h3>
-          <p class="course__payment-description">
-            <a href="" class="course__payment-docs">документы</a>
+
+        <!-- Платежная карточка -->
+        <div class="course__payment">
+          <h3 class="course__payment-heading">Оплата курса</h3>
+          <p class="course__payment-info">
+            Курс будет доступен сразу после оплаты, но для получения баллов НМО необходимо предоставить
+            <a href="#" class="course__payment-link">документы</a>
           </p>
-          <button class="course__payment-btn"></button>
-          <a href="#discount" class="course__payment-discount"></a>
+          <p class="course__payment-price">7 999 ₽</p>
+          <a href="#" class="course__payment-button">
+            <i class="fas fa-credit-card"></i>
+            Перейти к оплате курса
+          </a>
+          <a href="#discount" class="course__payment-promo">Получить скидку 10%</a>
         </div>
       </div>
     </section>
@@ -85,7 +265,7 @@
         <h2 class="speakers__title">Спикеры</h2>
         <div class="speakers__cards">
           <div class="speakers__card">
-            <img src="assets/img/speaker-profile-pic1.png" alt="спикер" class="speakers__img" />
+            <img src="assets/img/speaker-profile-pic-1.png" alt="спикер" class="speakers__img" />
             <div class="speakers__card-text">
               <h3 class="speakers__name">Константинопольский Константин Константинович</h3>
               <p class="speakers__description">
@@ -96,7 +276,7 @@
             </div>
           </div>
           <div class="speakers__card">
-            <img src="assets/img/speaker-profile-pic2.png" alt="спикер" class="speakers__img" />
+            <img src="assets/img/speaker-profile-pic-2.png" alt="спикер" class="speakers__img" />
             <div class="speakers__card-text">
               <h3 class="speakers__name">Елисеева Дарья Дмитриевна</h3>
               <p class="speakers__description">
@@ -126,13 +306,13 @@
         <h2 class="partners__title">Партнёры</h2>
         <div class="partners__cards">
           <div class="partners__card">
-            <img src="assets/img/Bayer 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+            <img src="assets/img/Bayer-logo.png" alt="логотип партнера" class="partners__logo" />
           </div>
           <div class="partners__card">
-            <img src="assets/img/BMS 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+            <img src="assets/img/BMS-logo.png" alt="логотип партнера" class="partners__logo" />
           </div>
           <div class="partners__card">
-            <img src="assets/img/Amgen 300х112 MAX.png" alt="логотип партнера" class="partners__logo" />
+            <img src="assets/img/Amgen-logo.png" alt="логотип партнера" class="partners__logo" />
           </div>
         </div>
       </div>

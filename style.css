@@ -3,82 +3,37 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-ul[role='list'],
-ol[role='list'] {
+
+ul {
   list-style: none;
 }
-body {
-  min-height: 100vh;
-  line-height: 1.5;
+
+a {
+  text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
+
 img,
-picture {
+picture,
+video {
   max-width: 100%;
   display: block;
-}
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-}
-textarea:not([rows]) {
-  min-height: 10em;
-}
-:target {
-  scroll-margin-block: 5ex;
 }
 
 /* Layout */
 body {
   background-color: #f3f7f9;
   font-family: 'Roboto', sans-serif;
-  background-color: #333;
 }
 
 /* Utility */
 .container {
   width: 83%;
-  max-width: 75.5rem; /* 1208 пикселей - максимальная ширина, весь сайт по центру из макета */
+  /* 1208 пикселей - максимальная ширина, весь сайт по центру из макета */
+  /* max-width: 75.5rem;  */
   margin: 0 auto;
 }
 
@@ -111,10 +66,178 @@ body {
   place-items: center;
 }
 
-/* Медиа мобильный */
-@media (min-width: 768px) {
+/* Программа курса */
+.program {
+  max-width: 42rem;
+  margin: 0 auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Медиа планшет */
-@media (min-width: 1024px) {
+.program__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.program__section {
+  margin-bottom: 1.5rem;
+}
+
+.program__section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program__section-icon {
+  transition: all 0.1s ease-in;
+  color: #40b526;
+}
+
+.program__section-icon--rotated {
+  transform: rotate(-180deg);
+}
+
+.program__lectures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.program__lectures--hidden {
+  display: none;
+}
+
+.program__lecture {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.program__lecture-image-container {
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.program__lecture-image {
+  border-radius: 0.5rem;
+  width: 120px;
+  height: 72px;
+}
+
+.program__lecture-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.program__lecture-lock-icon {
+  font-size: 1.5rem;
+}
+
+.program__lecture-content {
+  flex-grow: 1;
+}
+
+.program__lecture-title {
+  font-weight: 600;
+}
+
+.program__final {
+  border: 1px solid #94a9b7;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+.program__final-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program__final-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.program__final-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.program__final-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Оплата курса */
+.course__payment {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 20rem;
+  width: 100%;
+}
+
+.course__payment-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.course__payment-info {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.course__payment-link {
+  color: #40b526;
+  text-decoration: none;
+}
+
+.course__payment-price {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.course__payment-button {
+  background-color: #40b526;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.course__payment-button i {
+  margin-right: 0.5rem;
+}
+
+.course__payment-promo {
+  display: block;
+  color: #40b526;
+  text-align: center;
+  text-decoration: none;
 }
