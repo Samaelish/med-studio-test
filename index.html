@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <img src="" alt="логотип" class="header__logo" />
+        <img src="assets/img/header-logo.png" alt="логотип" class="header__logo" />
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="#" class="header__nav-link">Расписание</a></li>
@@ -28,8 +28,49 @@
         <a href="" class="">Личный кабинет</a>
       </div>
     </header>
-    <section class="hero">
-      <div class="container"></div>
+    <section class="main">
+      <div class="container">
+        <div class="main__content">
+          <div class="main__header">
+            <i class="fas fa-book-open main__header-icon"></i>
+            <span class="main__header-text">+36</span>
+          </div>
+          <div class="main__info">
+            <span class="main__badge">НОВЫЙ ПОТОК</span>
+            <span class="main__info-item">
+              <i class="far fa-calendar-alt main__info-icon"></i>
+              <span>С 25 АВГУСТА</span>
+            </span>
+            <span class="main__info-item">
+              <i class="far fa-clock main__info-icon"></i>
+              <span>12 недель</span>
+            </span>
+            <span class="main__info-item">
+              <i class="far fa-hourglass main__info-icon"></i>
+              <span>40 ак. часов</span>
+            </span>
+          </div>
+          <h1 class="main__title">Лечение острых вирусных инфекций методом энтервектоскопии</h1>
+          <div class="main__buttons">
+            <button class="main__button">Подробнее</button>
+            <button class="main__button">Записаться</button>
+          </div>
+          <div class="main__buttons">
+            <button class="main__button main__button--black">Записаться</button>
+            <button class="main__button main__button--icon">
+              <i class="far fa-credit-card main__button-icon"></i>
+              Оплатить
+            </button>
+          </div>
+        </div>
+        <img
+          alt="ORTO logo"
+          class="main__logo"
+          height="50"
+          src="https://storage.googleapis.com/a1aa/image/zhVeAzJASvPufuKYMYM92yejh10FhybB9WYOeRKaHHE.jpg"
+          width="100"
+        />
+      </div>
     </section>
     <section class="course">
       <div class="container">
@@ -50,16 +91,7 @@
             <div class="program__lectures">
               <div class="program__lecture">
                 <div class="program__lecture-image-container">
-                  <video
-                    class="program__lecture-image"
-                    controls
-                    muted
-                    poster="thumbnail.jpg"
-                    width="100%"
-                    height="auto"
-                    preload="metadata"
-                    style="max-width: 800px; margin: 20px auto; display: block"
-                  >
+                  <video class="program__lecture-video" controls muted poster="thumbnail.jpg" preload="metadata">
                     <!-- Несколько источников для кросс-браузерности -->
                     <source src="video/webm/my-video.webm" type="video/webm" />
                     <source src="video/mp4/my-video.mp4" type="video/mp4" />
@@ -79,16 +111,7 @@
               </div>
               <div class="program__lecture">
                 <div class="program__lecture-image-container">
-                  <video
-                    class="program__lecture-image"
-                    controls
-                    muted
-                    poster="thumbnail.jpg"
-                    width="100%"
-                    height="auto"
-                    preload="metadata"
-                    style="max-width: 800px; margin: 20px auto; display: block"
-                  >
+                  <video class="program__lecture-video" controls muted poster="thumbnail.jpg" preload="metadata">
                     <!-- Несколько источников для кросс-браузерности -->
                     <source src="video/webm/my-video.webm" type="video/webm" />
                     <source src="video/mp4/my-video.mp4" type="video/mp4" />
@@ -111,16 +134,7 @@
               </div>
               <div class="program__lecture">
                 <div class="program__lecture-image-container">
-                  <video
-                    class="program__lecture-image"
-                    controls
-                    muted
-                    poster="thumbnail.jpg"
-                    width="100%"
-                    height="auto"
-                    preload="metadata"
-                    style="max-width: 800px; margin: 20px auto; display: block"
-                  >
+                  <video class="program__lecture-video" controls muted poster="thumbnail.jpg" preload="metadata">
                     <!-- Несколько источников для кросс-браузерности -->
                     <source src="video/webm/my-video.webm" type="video/webm" />
                     <source src="video/mp4/my-video.mp4" type="video/mp4" />
@@ -144,16 +158,7 @@
               </div>
               <div class="program__lecture">
                 <div class="program__lecture-image-container">
-                  <video
-                    class="program__lecture-image"
-                    controls
-                    muted
-                    poster="thumbnail.jpg"
-                    width="100%"
-                    height="auto"
-                    preload="metadata"
-                    style="max-width: 800px; margin: 20px auto; display: block"
-                  >
+                  <video class="program__lecture-video" controls muted poster="thumbnail.jpg" preload="metadata">
                     <!-- Несколько источников для кросс-браузерности -->
                     <source src="video/webm/my-video.webm" type="video/webm" />
                     <source src="video/mp4/my-video.mp4" type="video/mp4" />
