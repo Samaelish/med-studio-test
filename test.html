@@ -2,151 +2,233 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Программа курса</title>
+    <title>Course Program</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <style>
-      :root {
-        --primary-color: #11121a;
-        --hover-color: #272832;
-        --accent-color: #0071ff;
-        --text-color: #c9c9c9;
-      }
-      * {
+      body {
+        background-color: #f9fafb;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
-      html {
-        font-family: sans-serif;
-        color: var(--text-color);
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 16px;
       }
-      body {
-        min-height: 100vh;
-        min-height: 100dvh;
-        background-color: var(--primary-color);
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
-      nav {
-        background-color: var(--primary-color);
-        border-bottom: 1px solid var(--hover-color);
+      @media (min-width: 1024px) {
+        .grid {
+          grid-template-columns: 2fr 1fr;
+        }
       }
-      nav ul {
-        list-style-type: none;
+      .text-gray-700 {
+        color: #4a5568;
+      }
+      .text-gray-800 {
+        color: #2d3748;
+      }
+      .text-gray-600 {
+        color: #718096;
+      }
+      .text-blue-500 {
+        color: #4299e1;
+      }
+      .text-green-500 {
+        color: #48bb78;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+      }
+      .font-bold {
+        font-weight: bold;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .mb-2 {
+        margin-bottom: 8px;
+      }
+      .mb-4 {
+        margin-bottom: 16px;
+      }
+      .mb-6 {
+        margin-bottom: 24px;
+      }
+      .p-4 {
+        padding: 16px;
+      }
+      .p-6 {
+        padding: 24px;
+      }
+      .bg-white {
+        background-color: #ffffff;
+      }
+      .rounded-lg {
+        border-radius: 8px;
+      }
+      .shadow {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+      }
+      .flex {
         display: flex;
       }
-      nav .home-li {
-        margin-right: auto;
+      .items-center {
+        align-items: center;
       }
-      nav li {
-        display: flex;
+      .w-12 {
+        width: 3rem;
       }
-      nav a {
-        display: flex;
-        text-decoration: none;
-        color: var(--text-color);
-        padding: 1em 2em;
-        transition: background-color 150ms ease;
+      .h-12 {
+        height: 3rem;
       }
-      nav a:hover {
-        background-color: var(--hover-color);
+      .rounded-full {
+        border-radius: 9999px;
       }
-      nav a.active-link {
-        border-bottom: 2px solid var(--text-color);
+      .mr-4 {
+        margin-right: 16px;
       }
-      nav a.accent-link {
-        background-color: var(--accent-color);
-      }
-      #open-navbar-button {
-        display: none;
-        background: none;
-        border: none;
-        padding: 1em;
+      .ml-auto {
         margin-left: auto;
-        cursor: pointer;
       }
-      #close-navbar-button {
-        display: none;
-        background: none;
-        border: none;
-        padding: 1em;
-        cursor: pointer;
+      .w-full {
+        width: 100%;
       }
-      #overlay {
-        background: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        inset: 0;
-        z-index: 9;
-        display: none;
+      .bg-green-500 {
+        background-color: #48bb78;
       }
-      @media screen and (max-width: 700px) {
-        nav {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          height: 100vh;
-          width: min(15em, 100%);
-          z-index: 10;
-          border-left: 1px solid var(--hover-color);
-          transition: right 300ms ease-out;
-        }
-        nav.show {
-          right: 0;
-        }
-        nav.show ~ #overlay {
-          display: block;
-        }
-        nav ul {
-          width: 100%;
-          flex-direction: column;
-        }
-        nav a {
-          width: 100%;
-          padding-left: 2.5em;
-        }
-        nav a.active-link {
-          border-bottom: none;
-        }
-        nav a.accent-link {
-          margin-right: unset;
-        }
-        #open-navbar-button,
-        #close-navbar-button {
-          display: block;
-        }
+      .text-white {
+        color: #ffffff;
+      }
+      .py-2 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .block {
+        display: block;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .space-y-4 > * + * {
+        margin-top: 16px;
       }
     </style>
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <button
-      id="open-navbar-button"
-      onclick="openNavbar()"
-      aria-label="open navbar"
-      aria-expanded="false"
-      aria-controls="navbar"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-        <path
-          d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"
-        />
-      </svg>
-    </button>
-    <nav id="navbar">
-      <ul>
-        <li>
-          <button id="close-navbar-button" onclick="closeNavbar()" aria-label="close navbar">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
-              <path
-                d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"
-              />
-            </svg>
-          </button>
-        </li>
-        <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a class="accent-link" href="#login">Login</a></li>
-      </ul>
-    </nav>
-    <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
+    <div class="container">
+      <div class="grid">
+        <div>
+          <p class="text-gray-700 mb-6">
+            Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было
+            показано выше, природа гамма-всплесков вызывает болид. Вселенная достаточно огромна, чтобы аномальная
+            джетовая активность последовательно оценивает центральный параметр. Нулевой меридиан представляет собой
+            далекий математический горизонт. Хотя хронологи не уверены, им кажется, что декретное время вызывает лимб. У
+            планет-гигантов нет твёрдой поверхности, таким образом астероид прочно оценивает натуральный логарифм.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Программа курса</h2>
+          <div class="mb-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Часть 1. Теоретическая часть
+              <i class="fas fa-chevron-down"></i>
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                <img
+                  alt="Lecturer 1"
+                  class="w-12 h-12 rounded-full mr-4"
+                  height="50"
+                  src="https://storage.googleapis.com/a1aa/image/7-cSu9yuKFn7qqEATp10sqVOsv7ksYyFrV30rNY-vQc.jpg"
+                  width="50"
+                />
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Лекция 1. Что такое резекция лазером и в чём преимущество энтервектоскопии для лечения бесплодия
+                  </p>
+                </div>
+                <i class="fas fa-play-circle text-blue-500 ml-auto"></i>
+              </div>
+              <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                <img
+                  alt="Lecturer 2"
+                  class="w-12 h-12 rounded-full mr-4"
+                  height="50"
+                  src="https://storage.googleapis.com/a1aa/image/QUxT0mSWXFiRFGYQ0_pbRJ94vxyEXn_JejE65AyRGaQ.jpg"
+                  width="50"
+                />
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Лекция 2. Энтервектоскопия как базовый метод лечения гемангиомы Шлейна
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                <img
+                  alt="Lecturer 3"
+                  class="w-12 h-12 rounded-full mr-4"
+                  height="50"
+                  src="https://storage.googleapis.com/a1aa/image/otdiEMq_hclbBZlhFNvj3e5kJ0w5QX6xt-bUImAbdnY.jpg"
+                  width="50"
+                />
+                <div>
+                  <p class="text-gray-800 font-semibold">
+                    Лекция 3. Проведение прокалификации кома при завершении энтервектоскопии и дальнейшее
+                    симптоматическое лечение
+                  </p>
+                </div>
+                <i class="fas fa-play-circle text-blue-500 ml-auto"></i>
+              </div>
+              <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                <img
+                  alt="Lecturer 4"
+                  class="w-12 h-12 rounded-full mr-4"
+                  height="50"
+                  src="https://storage.googleapis.com/a1aa/image/jSHKjy1FPZPNlR1uJS-AVOW6RHl6EqCiTNzzE9kHm7A.jpg"
+                  width="50"
+                />
+                <div>
+                  <p class="text-gray-800 font-semibold">Онлайн-трансляция со всеми спикерами</p>
+                </div>
+                <i class="fas fa-broadcast-tower text-blue-500 ml-auto"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Часть 2. Практическая часть</h3>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
+            Часть 3. Финал
+            <i class="fas fa-chevron-down"></i>
+          </h3>
+          <div class="p-4 bg-white rounded-lg shadow">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Часть 4. Итоговый контроль</h4>
+            <p class="text-gray-600">Вопросов: 30</p>
+            <p class="text-gray-600">Время: 60 мин</p>
+            <p class="text-gray-600">Попыток: 2</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Оплата курса</h3>
+          <p class="text-gray-600 mb-4">
+            Курс будет доступен сразу после оплаты, но для получения баллов НМО необходимо предоставить
+            <a class="text-blue-500" href="#">документы</a>
+          </p>
+          <p class="text-3xl font-bold text-gray-800 mb-4">7 999 ₽</p>
+          <button class="w-full bg-green-500 text-white py-2 rounded-lg mb-2">Перейти к оплате курса</button>
+          <a class="text-green-500 text-center block" href="#">Получить скидку 10%</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
