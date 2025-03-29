@@ -11,23 +11,54 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <img src="assets/img/header-logo.png" alt="логотип" class="header__logo" />
+      <div class="container header__flex">
+        <a href="#" class="header__img-link">
+          <img src="assets/img/header-logo.svg" alt="логотип" class="header__logo" />
+        </a>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="#" class="header__nav-link">Расписание</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Курсы</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Проекты</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Медиатека</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">О проекте</a></li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><img src="assets/img/ms-club.png" alt="ms club" /></a>
+              <a href="#" class="header__nav-link">
+                Медиатека
+                <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">
+                О проекте
+                <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__img-link">
+                <img src="assets/img/ms-club.svg" alt="MS Club" />
+              </a>
             </li>
           </ul>
         </nav>
-        <a href="" class="">Личный кабинет</a>
+        <div class="header__nav-item">
+          <a href="#" class="header__nav-link">
+            Личный кабинет
+            <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+          </a>
+        </div>
       </div>
     </header>
+    <section class="menu">
+      <div class="container">
+        <nav class="menu__nav">
+          <ul class="menu__nav-list">
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link menu__nav-link--active">Описание</a></li>
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">Обучение</a></li>
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">Чат</a></li>
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">Документы и оплата</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
     <section class="main">
       <div class="container">
         <div class="main__content">
@@ -324,10 +355,10 @@
         <h2 class="sponsors__title">Генеральные спонсоры</h2>
         <div class="sponsors__cards">
           <div class="sponsors__card">
-            <img src="assets/img/sponsor-1.png" alt="логотип спонсора" class="sponsors__logo" />
+            <img src="assets/img/sponsor-1.svg" alt="логотип спонсора" class="sponsors__logo" />
           </div>
           <div class="sponsors__card">
-            <img src="assets/img/sponsor-2.png" alt="логотип спонсора" class="sponsors__logo" />
+            <img src="assets/img/sponsor-2.svg" alt="логотип спонсора" class="sponsors__logo" />
           </div>
         </div>
       </div>
@@ -350,3 +381,6 @@
     </section>
   </body>
 </html>
+
+<!-- ToDo -->
+<!--  MS Club лишнее место внутри li/a мешающее -->

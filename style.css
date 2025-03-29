@@ -1,24 +1,28 @@
+/* 1. Reorganized CSS variables into logical groups */
 :root {
+  /* Colors grouped by purpose */
+  --color-primary: #4299e1;
+  --color-accent: #40b526;
+  --color-accent-dark: #348842;
+  --color-final-icon: #3b64a1;
   --color-dark: #252d33;
   --color-text-secondary: #4b5563;
   --color-gray: #94a9b7;
   --color-line: #d1dce2;
-  --color-white: #ffffff;
   --color-light: #f3f7f9;
-  --color-accent-dark: #348842;
-  --color-primary: #4299e1;
-  --color-accent: #40b526;
-  --color-final-icon: #3b64a1;
+  --color-white: #ffffff;
 
-  --text-xs: clamp(0.75rem, 1.17vw, 0.875rem); /* 10.5px → 14px */
+  /* Typography scale ordered by size */
+  --text-12: clamp(0.563rem, 1vw, 0.75rem); /* 9px → 12px */
+  --text-xs: clamp(0.75rem, 1.17vw, 0.875rem); /* 12px → 14px */
+  --text-18: clamp(0.844rem, 1.5vw, 1.125rem); /* 13.5px → 18px */
   --text-md: clamp(0.938rem, 1.67vw, 1.25rem); /* 15px → 20px */
   --text-lg: clamp(1.125rem, 2vw, 1.5rem); /* 18px → 24px */
   --text-xl: clamp(1.5rem, 2.67vw, 2rem); /* 24px → 32px */
-  --text-12: clamp(0.563rem, 1vw, 0.75rem); /* 9px → 12px */
-  --text-18: clamp(0.844rem, 1.5vw, 1.125rem); /* 13.5px → 18px */
   --text-30: clamp(1.406rem, 2.5vw, 1.875rem); /* 22.5px → 30px */
   --text-48: clamp(2.25rem, 4vw, 3rem); /* 36px → 48px */
 
+  /* Spacing system */
   --space-1: 0.25rem; /* 4px */
   --space-2: 0.5rem; /* 8px */
   --space-3: 0.75rem; /* 12px */
@@ -27,18 +31,22 @@
   --space-6: 1.5rem; /* 24px */
   --space-7: 2rem; /* 32px */
   --space-8: 2.5rem; /* 40px */
-  --space-9: 3.5rem; /* 56px */
+  --space-9: 3rem; /* 48px */
+  --space-10: 3.5rem; /* 56px */
 
-  --rounded-sm: 0.5rem;
-  --rounded-md: 0.75rem;
-  --rounded-lg: 1rem;
-  --rounded-xl: 1.25rem;
+  /* Border radius */
+  --rounded-sm: 0.5rem; /* 8px */
+  --rounded-md: 0.75rem; /* 12px */
+  --rounded-lg: 1rem; /* 16px */
+  --rounded-xl: 1.25rem; /* 20px */
   --rounded-full: 9999px;
 
+  /* Font weights */
   --font-regular: 400;
   --font-bold: 700;
 }
 
+/* 2. Combined reset styles */
 *,
 *::before,
 *::after {
@@ -47,21 +55,7 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img,
-picture,
-video {
-  max-width: 100%;
-}
-
-/* Layout */
+/* 3. Base styles grouped together */
 body {
   background-color: var(--color-light);
   font-family: 'Roboto', sans-serif;
@@ -69,28 +63,127 @@ body {
   font-weight: var(--font-regular);
 }
 
-/* Utility */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img,
+picture,
+video {
+  max-width: 100%;
+}
+
+/* 4. Layout utilities */
 .container {
   width: 83%;
-  /* 1208 пикселей - максимальная ширина, весь сайт по центру из макета */
-  /* max-width: 75.5rem; */
   margin: 0 auto;
 }
 
-/* Header */
+/* 5. Component styles grouped with their media queries */
+/* Header component */
+.header {
+  margin-top: var(--space-7);
+  margin-bottom: 72px;
+  font-size: var(--text-18);
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+}
+
 .header__logo {
   max-width: 7rem;
   height: 2rem;
 }
+.header__nav-item {
+  display: flex;
+  align-items: center;
+}
+.header__nav-link {
+  position: relative;
+  transition: color 0.1s ease-in;
+}
+.header__nav-link:hover {
+  color: var(--color-accent);
+}
+/* Animated underline effect */
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust distance from text */
+  width: 100%;
+  height: 2px; /* Underline thickness */
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.header__nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.header__img-link {
+  font-size: 0;
+}
 
-/* Секция Main */
+#header__dropdown-icon {
+  display: none;
+  transition: all 0.1s ease-in;
+  color: var(--color-accent);
+  margin-left: var(--space-2);
+}
+
+.header__nav-link:hover #header__dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Menu */
+.menu {
+  color: var(--color-dark);
+  font-size: var(--text-48);
+  font-weight: var(--font-bold);
+  margin-bottom: 34px;
+}
+.menu__nav-link {
+  position: relative;
+  transition: color 0.1s ease-in;
+}
+.menu__nav-link:hover {
+  color: var(--color-accent);
+}
+/* Animated underline effect */
+.menu__nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.menu__nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.menu__nav-link--active {
+  color: var(--color-gray);
+}
+
+/* Main component */
 .main {
   background-color: var(--color-primary);
   border-radius: var(--rounded-lg);
   position: relative;
   overflow: hidden;
   color: var(--color-white);
+  margin-bottom: var(--space-9);
 }
+
 .main__background {
   position: absolute;
   inset: 0;
@@ -99,6 +192,7 @@ body {
   object-fit: cover;
   opacity: 0.5;
 }
+
 .main__content {
   position: relative;
   z-index: 10;
@@ -170,12 +264,13 @@ body {
   height: auto;
 }
 
-/* Программа курса - course+program */
+/* Course Program component */
 .course__description {
   font-size: var(--text-18);
   color: var(--color-dark);
-  margin-bottom: var(--space-9);
+  margin-bottom: var(--space-10);
 }
+
 .program {
   margin-bottom: var(--space-3);
 }
@@ -185,7 +280,7 @@ body {
   margin-bottom: var(--space-6);
 }
 .program__section {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 .program__section-title {
   font-size: var(--text-30);
@@ -260,7 +355,7 @@ body {
   margin-bottom: var(--space-2);
 }
 
-/* Оплата курса */
+/* Payment component */
 .course__payment {
   background-color: var(--color-white);
   border-radius: var(--rounded-md);
@@ -281,6 +376,11 @@ body {
 .course__payment-link {
   color: var(--color-accent);
   text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+.course__payment-link:hover {
+  color: var(--color-dark);
+  text-decoration: underline;
 }
 .course__payment-price {
   font-size: var(--text-48);
@@ -293,7 +393,7 @@ body {
   color: var(--color-white);
   font-size: var(--text-18);
   font-weight: var(--font-bold);
-  padding: var(--space-3);
+  padding: var(--space-4) var(--space-7);
   border-radius: var(--rounded-full);
   width: 100%;
   display: flex;
@@ -316,9 +416,16 @@ body {
   color: var(--color-accent);
   text-align: center;
   text-decoration: none;
+  transition: color 0.1s ease-in;
+}
+.course__payment-promo:hover {
+  color: var(--color-dark);
 }
 
-/* Спикеры */
+/* Speakers component */
+.speakers {
+  margin-bottom: 80px;
+}
 .speakers__title {
   margin-bottom: 32px;
 }
@@ -347,7 +454,10 @@ body {
   line-height: 1.375;
 }
 
-/* Спонсоры */
+/* Sponsors component */
+.sponsors {
+  margin-bottom: 80px;
+}
 .sponsors__title {
   margin-bottom: 34px;
 }
@@ -365,7 +475,10 @@ body {
   width: 100%;
 }
 
-/* Партнеры */
+/* Partners component */
+.partners {
+  margin-bottom: 80px;
+}
 .partners__title {
   margin-bottom: 24px;
 }
@@ -376,27 +489,16 @@ body {
 }
 .partners__card {
   background: var(--color-white);
-  padding: var(--space-3) 2rem;
   display: grid;
   place-items: center;
 }
 
+/* 6. Layout adjustments with media queries */
+
 @media (min-width: 48rem) {
-  .course-flex {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-4);
-  }
-  .course__content {
-    width: 65%;
-  }
-  .course__payment {
-    width: 45%;
-  }
   .program__lecture {
     display: flex;
-    gap: var(--space-4);
+    gap: var(--space-6);
     align-items: center;
   }
   .program__final-detail {
@@ -412,7 +514,41 @@ body {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 43.75rem) {
+  .header__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  /* Menu */
+  .menu__nav-list {
+    display: flex;
+    gap: var(--space-7);
+  }
+
+  .course-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+  .course__content {
+    width: 65%;
+  }
+  .course__payment {
+    width: 45%;
+  }
+}
+
+@media (min-width: 75rem) {
+  #header__dropdown-icon {
+    display: inline-block;
+  }
   .speakers__card {
     display: flex;
     align-items: flex-start;
