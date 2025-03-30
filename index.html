@@ -15,8 +15,36 @@
         <a href="#" class="header__img-link">
           <img src="assets/img/header-logo.svg" alt="логотип" class="header__logo" />
         </a>
+        <button
+          id="open-navbar-button"
+          onclick="openNavbar()"
+          aria-label="open navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#40b526">
+            <path
+              d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"
+            />
+          </svg>
+        </button>
         <nav class="header__nav">
           <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <button id="close-navbar-button" onclick="closeNavbar()" aria-label="close navbar">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40px"
+                  viewBox="0 -960 960 960"
+                  width="40px"
+                  fill="#40b526"
+                >
+                  <path
+                    d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"
+                  />
+                </svg>
+              </button>
+            </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Расписание</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Курсы</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Проекты</a></li>
@@ -34,18 +62,19 @@
             </li>
             <li class="header__nav-item">
               <a href="#" class="header__img-link">
-                <img src="assets/img/ms-club.svg" alt="MS Club" />
+                <img class="header__img" src="assets/img/ms-club.svg" alt="MS Club" />
               </a>
             </li>
           </ul>
+          <div class="header__nav-item">
+            <a href="#" class="header__nav-link">
+              Личный кабинет
+              <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+            </a>
+          </div>
         </nav>
-        <div class="header__nav-item">
-          <a href="#" class="header__nav-link">
-            Личный кабинет
-            <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
-          </a>
-        </div>
       </div>
+      <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
     </header>
     <section class="menu">
       <div class="container">
@@ -57,48 +86,6 @@
             <li class="menu__nav-item"><a href="#" class="menu__nav-link">Документы и оплата</a></li>
           </ul>
         </nav>
-      </div>
-    </section>
-    <section class="main">
-      <div class="container">
-        <div class="main__content">
-          <div class="main__header">
-            <i class="fas fa-book-open main__header-icon"></i>
-            <span class="main__header-text">+36</span>
-          </div>
-          <div class="main__info">
-            <span class="main__badge">НОВЫЙ ПОТОК</span>
-            <span class="main__info-item">
-              <i class="far fa-calendar-alt main__info-icon"></i>
-              <span>С 25 АВГУСТА</span>
-            </span>
-            <span class="main__info-item">
-              <i class="far fa-clock main__info-icon"></i>
-              <span>12 недель</span>
-            </span>
-            <span class="main__info-item">
-              <i class="far fa-hourglass main__info-icon"></i>
-              <span>40 ак. часов</span>
-            </span>
-          </div>
-          <h1 class="main__title">Лечение острых вирусных инфекций методом энтервектоскопии</h1>
-          <div class="main__buttons">
-            <button class="main__button">Подробнее</button>
-            <button class="main__button">Записаться</button>
-          </div>
-          <div class="main__buttons">
-            <button class="main__button main__button--black">Записаться</button>
-            <button class="main__button main__button--icon">
-              <i class="far fa-credit-card main__button-icon"></i>
-              Оплатить
-            </button>
-          </div>
-        </div>
-        <img
-          alt="ORTO logo"
-          class="main__logo"
-          src="https://storage.googleapis.com/a1aa/image/zhVeAzJASvPufuKYMYM92yejh10FhybB9WYOeRKaHHE.jpg"
-        />
       </div>
     </section>
     <section class="course">
@@ -124,11 +111,10 @@
                     <!-- Использую тэг video, а не iframe для производительности, сео и для возможности кастомизации -->
                     <video
                       class="program__lecture-video"
-                      controls
                       muted
                       width="120px"
                       height="72px"
-                      poster="thumbnail.jpg"
+                      poster="assets/img/video-thumbnail-1.png"
                       preload="none"
                     >
                       <!-- Несколько источников для кросс-браузерности -->
@@ -152,11 +138,10 @@
                   <div class="program__lecture-video-container">
                     <video
                       class="program__lecture-video"
-                      controls
                       muted
                       width="120px"
                       height="72px"
-                      poster="thumbnail.jpg"
+                      poster="assets/img/video-thumbnail-2.png"
                       preload="none"
                     >
                       <!-- Несколько источников для кросс-браузерности -->
@@ -181,11 +166,10 @@
                   <div class="program__lecture-video-container">
                     <video
                       class="program__lecture-video"
-                      controls
                       muted
                       width="120px"
                       height="72px"
-                      poster="thumbnail.jpg"
+                      poster="assets/img/video-thumbnail-3.png"
                       preload="none"
                     >
                       <!-- Несколько источников для кросс-браузерности -->
@@ -211,11 +195,10 @@
                   <div class="program__lecture-video-container">
                     <video
                       class="program__lecture-video"
-                      controls
                       muted
                       width="120px"
                       height="72px"
-                      poster="thumbnail.jpg"
+                      poster="assets/img/video-thumbnail-4.png"
                       preload="none"
                     >
                       <!-- Несколько источников для кросс-браузерности -->
@@ -291,22 +274,23 @@
       </div>
     </section>
     <section class="discount" id="discount">
-      <div class="container">
-        <p class="discount__subtitle">Подарок</p>
-        <h2 class="discount__title">Даём скидку 10% за просмотр материала партнёров</h2>
-        <p class="discount__description">
-          Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было
-          показано выше, природа гамма-всплексов вызывает болид.
-        </p>
+      <div class="container discount__flex">
+        <div class="discount__content">
+          <p class="discount__subtitle">Подарок</p>
+          <h2 class="discount__title">Даём скидку 10% за просмотр материала партнёров</h2>
+          <p class="discount__description">
+            Зенитное часовое число, как бы это ни казалось парадоксальным, притягивает случайный Ганимед. Как было
+            показано выше, природа гамма-всплексов вызывает болид.
+          </p>
+        </div>
         <video
           class="discount__video"
           controls
           muted
-          poster="thumbnail.jpg"
           width="120px"
           height="72px"
-          preload="none"
-          style="max-width: 800px; margin: 20px auto; display: block"
+          poster="assets/img/discount-thumbnail.png"
+          preload="metadata"
         >
           <!-- Несколько источников для кросс-браузерности -->
           <source src="video/webm/my-video.webm" type="video/webm" />
@@ -383,4 +367,6 @@
 </html>
 
 <!-- ToDo -->
-<!--  MS Club лишнее место внутри li/a мешающее -->
+<!-- Fix header horizontal scroll -->
+<!-- Main section -->
+<!-- Discount section icon on video -->
