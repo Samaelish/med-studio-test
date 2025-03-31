@@ -410,10 +410,11 @@ video {
 }
 .program__section-icon {
   color: var(--color-accent);
+  transform: rotate(-180deg);
   transition: all 0.1s ease-in;
 }
 .program__section-icon--rotated {
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
 }
 .program__lectures--hidden {
   display: none;
