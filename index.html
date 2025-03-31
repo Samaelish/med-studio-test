@@ -13,7 +13,7 @@
     <header class="header">
       <div class="container header__flex">
         <a href="#" class="header__img-link">
-          <img src="assets/img/header-logo.svg" alt="логотип" class="header__logo" />
+          <img src="assets/img/header-logo.svg" alt="логотип медстудио" class="header__logo" />
         </a>
         <button
           id="open-navbar-button"
@@ -51,30 +51,30 @@
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">
                 Медиатека
-                <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+                <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
               </a>
             </li>
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">
                 О проекте
-                <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+                <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
               </a>
             </li>
             <li class="header__nav-item">
               <a href="#" class="header__img-link">
-                <img class="header__img" src="assets/img/ms-club.svg" alt="MS Club" />
+                <img class="header__img" src="assets/img/ms-club.svg" alt="МС Клуб" />
               </a>
             </li>
           </ul>
-          <div class="header__nav-item">
+          <div class="header__nav-auth">
             <a href="#" class="header__nav-link">
               Личный кабинет
-              <i class="fas fa-chevron-up" id="header__dropdown-icon"></i>
+              <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
             </a>
           </div>
         </nav>
+        <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
       </div>
-      <div id="overlay" onclick="closeNavbar()" aria-hidden="true"></div>
     </header>
     <section class="menu">
       <div class="container">
@@ -86,6 +86,44 @@
             <li class="menu__nav-item"><a href="#" class="menu__nav-link">Документы и оплата</a></li>
           </ul>
         </nav>
+      </div>
+    </section>
+    <section class="main">
+      <div class="container main__flex">
+        <div class="main__content">
+          <div class="main__book-container">
+            <img src="assets/img/main-book.svg" alt="логотип книжки" class="main__book-icon" />
+            <span class="main__book-number">+36</span>
+          </div>
+          <div class="main__new-flow">
+            <div class="main__new-flow-text">НОВЫЙ ПОТОК</div>
+            <div class="main__new-flow-date">С 25 АВГУСТА</div>
+            <div class="main__new-flow-modules">
+              <img src="assets/img/academy-hat.svg" alt="учебная шапочка" />
+              12 модулей
+            </div>
+            <div class="main__new-flow-hours">
+              <img src="assets/img/main-clock.svg" alt="часы" />
+              40 ак. часов
+            </div>
+          </div>
+          <h1 class="main__description">Лечение острых вирусных инфекций методом энтервектоскопии</h1>
+          <div class="main__cta-button-container">
+            <button class="main__cta-button">акушерство</button>
+            <button class="main__cta-button">акушерство</button>
+          </div>
+          <div class="main__button-payment-container">
+            <!-- Added href="#" to the first <a> tag -->
+            <button href="#" class="main__default-button">Default</button>
+            <button href="#" class="main__payment-button">
+              <img src="assets/img/credit-card.svg" />
+              Secondary
+            </button>
+          </div>
+        </div>
+        <div class="main__logo-container">
+          <img alt="логотип ОРТО" class="main__logo" src="assets/img/main-logo.svg" />
+        </div>
       </div>
     </section>
     <section class="course">
@@ -103,7 +141,7 @@
             <div class="program__section">
               <h2 class="program__section-title">
                 Часть 1. Теоретическая часть
-                <i class="program__section-icon fas fa-chevron-down"></i>
+                <img src="assets/img/chevron-down.svg" class="program__section-icon" />
               </h2>
               <div class="program__lectures">
                 <div class="program__lecture">
@@ -222,34 +260,32 @@
             <div class="program__section">
               <h2 class="program__section-title">
                 Часть 2. Практическая часть
-                <i class="program__section-icon program__section-icon--rotated fas fa-chevron-down"></i>
+                <img src="assets/img/chevron-down.svg" class="program__section-icon" />
               </h2>
-              <div class="program__lectures program__lectures--hidden"></div>
             </div>
             <div class="program__section">
               <h2 class="program__section-title">
                 Часть 3. Финал
-                <i class="program__section-icon program__section-icon--rotated fas fa-chevron-down"></i>
+                <img src="assets/img/chevron-down.svg" class="program__section-icon" />
               </h2>
-              <div class="program__lectures program__lectures--hidden"></div>
             </div>
             <div class="program__final">
               <p class="program__final-description">Доступно после прохождения курса</p>
               <h2 class="program__final-title">
-                <i class="fas fa-award"></i>
+                <img src="assets/img/final-award.svg" />
                 Часть 4. Итоговый контроль
               </h2>
               <div class="program__final-details">
                 <div class="program__final-detail">
-                  <i class="fas fa-question-circle"></i>
+                  <img src="assets/img/final-question.svg" />
                   <span>Вопросов: 30</span>
                 </div>
                 <div class="program__final-detail">
-                  <i class="fas fa-clock"></i>
+                  <img src="assets/img/final-clock.svg" />
                   <span>Время: 60 мин</span>
                 </div>
                 <div class="program__final-detail">
-                  <i class="fas fa-sync-alt"></i>
+                  <img src="assets/img/final-sync.svg" />
                   <span>Попыток: 2</span>
                 </div>
               </div>
@@ -266,7 +302,7 @@
           </p>
           <p class="course__payment-price">7 999 ₽</p>
           <a href="#" class="course__payment-button">
-            <i class="fas fa-credit-card"></i>
+            <img src="assets/img/credit-card.svg" />
             Перейти к оплате курса
           </a>
           <a href="#discount" class="course__payment-promo">Получить скидку 10%</a>
@@ -283,15 +319,7 @@
             показано выше, природа гамма-всплексов вызывает болид.
           </p>
         </div>
-        <video
-          class="discount__video"
-          controls
-          muted
-          width="120px"
-          height="72px"
-          poster="assets/img/discount-thumbnail.png"
-          preload="metadata"
-        >
+        <video class="discount__video" muted poster="assets/img/discount-thumbnail.png" preload="metadata">
           <!-- Несколько источников для кросс-браузерности -->
           <source src="video/webm/my-video.webm" type="video/webm" />
           <source src="video/mp4/my-video.mp4" type="video/mp4" />
@@ -367,6 +395,4 @@
 </html>
 
 <!-- ToDo -->
-<!-- Fix header horizontal scroll -->
-<!-- Main section -->
 <!-- Discount section icon on video -->

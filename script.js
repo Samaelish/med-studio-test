@@ -3,7 +3,7 @@
 document.querySelectorAll('.program__section-title').forEach(title => {
   title.addEventListener('click', () => {
     // Находим иконку-шеврон и контейнер с лекциями
-    const icon = title.querySelector('.fa-chevron-down')
+    const icon = title.querySelector('.program__section-icon')
     const lectures = title.nextElementSibling
 
     // Переключаем классы для анимации иконки и скрытия/показа лекций
