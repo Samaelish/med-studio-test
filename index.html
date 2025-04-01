@@ -12,15 +12,15 @@
   <body>
     <header class="header">
       <div class="container header__flex">
-        <a href="#" class="header__img-link">
+        <a href="https://med-studio-test.vercel.app/" class="header__img-link">
           <img src="assets/img/header-logo.svg" alt="логотип медстудио" class="header__logo" />
         </a>
         <button
           id="open-navbar-button"
           onclick="openNavbar()"
-          aria-label="open navbar"
+          aria-label="open header__nav"
           aria-expanded="false"
-          aria-controls="navbar"
+          aria-controls="header__nav"
         >
           <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#40b526">
             <path
@@ -28,7 +28,7 @@
             />
           </svg>
         </button>
-        <nav class="header__nav">
+        <nav id="header__nav" class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <button id="close-navbar-button" onclick="closeNavbar()" aria-label="close navbar">
@@ -51,13 +51,13 @@
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">
                 Медиатека
-                <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
+                <img src="assets/img/chevron-down.svg" class="header__dropdown-icon" />
               </a>
             </li>
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">
                 О проекте
-                <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
+                <img src="assets/img/chevron-down.svg" class="header__dropdown-icon" />
               </a>
             </li>
             <li class="header__nav-item">
@@ -69,7 +69,7 @@
           <div class="header__nav-auth">
             <a href="#" class="header__nav-link">
               Личный кабинет
-              <img src="assets/img/chevron-down.svg" id="header__dropdown-icon" />
+              <img src="assets/img/chevron-down.svg" class="header__dropdown-icon" />
             </a>
           </div>
         </nav>
@@ -114,8 +114,8 @@
           </div>
           <div class="main__button-payment-container">
             <!-- Added href="#" to the first <a> tag -->
-            <button href="#" class="main__default-button">Default</button>
-            <button href="#" class="main__payment-button">
+            <button class="main__default-button">Default</button>
+            <button class="main__payment-button">
               <img src="assets/img/credit-card.svg" />
               Secondary
             </button>
@@ -137,12 +137,12 @@
             планет-гигантов нет твёрдой поверхности, таким образом астероид прочно оценивает натуральный логарифм.
           </p>
           <div class="program">
-            <h1 class="program__title">Программа курса</h1>
+            <h2 class="program__title">Программа курса</h2>
             <div class="program__section">
-              <h2 class="program__section-title">
+              <h3 class="program__section-title">
                 Часть 1. Теоретическая часть
                 <img src="assets/img/chevron-down.svg" class="program__section-icon" />
-              </h2>
+              </h3>
               <div class="program__lectures">
                 <div class="program__lecture">
                   <div class="program__lecture-video-container">
@@ -150,8 +150,6 @@
                     <video
                       class="program__lecture-video"
                       muted
-                      width="120px"
-                      height="72px"
                       poster="assets/img/video-thumbnail-1.png"
                       preload="none"
                     >
@@ -177,8 +175,6 @@
                     <video
                       class="program__lecture-video"
                       muted
-                      width="120px"
-                      height="72px"
                       poster="assets/img/video-thumbnail-2.png"
                       preload="none"
                     >
@@ -205,8 +201,6 @@
                     <video
                       class="program__lecture-video"
                       muted
-                      width="120px"
-                      height="72px"
                       poster="assets/img/video-thumbnail-3.png"
                       preload="none"
                     >
@@ -234,8 +228,6 @@
                     <video
                       class="program__lecture-video"
                       muted
-                      width="120px"
-                      height="72px"
                       poster="assets/img/video-thumbnail-4.png"
                       preload="none"
                     >
@@ -258,23 +250,23 @@
               </div>
             </div>
             <div class="program__section">
-              <h2 class="program__section-title">
+              <h3 class="program__section-title">
                 Часть 2. Практическая часть
                 <img src="assets/img/chevron-down.svg" class="program__section-icon" />
-              </h2>
+              </h3>
             </div>
             <div class="program__section">
-              <h2 class="program__section-title">
+              <h3 class="program__section-title">
                 Часть 3. Финал
                 <img src="assets/img/chevron-down.svg" class="program__section-icon" />
-              </h2>
+              </h3>
             </div>
             <div class="program__final">
               <p class="program__final-description">Доступно после прохождения курса</p>
-              <h2 class="program__final-title">
+              <h3 class="program__final-title">
                 <img src="assets/img/final-award.svg" />
                 Часть 4. Итоговый контроль
-              </h2>
+              </h3>
               <div class="program__final-details">
                 <div class="program__final-detail">
                   <img src="assets/img/final-question.svg" />
