@@ -375,8 +375,6 @@ video {
 .main__payment-button i {
   margin-right: var(--space-2);
 }
-.main__logo-container {
-}
 
 /* Course Program component */
 .course {
@@ -723,6 +721,7 @@ video {
     align-items: center;
     flex-direction: row;
     gap: var(--space-6);
+    margin-bottom: var(--space-8);
   }
 }
 
