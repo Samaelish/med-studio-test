@@ -769,7 +769,7 @@ video {
   }
 }
 
-@media (min-width: 85.375rem) {
+@media (min-width: 92rem) {
   .container {
     width: 75%;
   }
