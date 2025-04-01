@@ -309,7 +309,7 @@ video {
   font-size: var(--text-14);
 }
 .main__description {
-  font-size: var(--text-48);
+  font-size: 1.875rem;
   margin-bottom: var(--space-6);
 }
 .main__cta-button-container {
@@ -674,6 +674,9 @@ video {
   .main__logo {
     width: 100%;
     max-width: 350px;
+  }
+  .main__description {
+    font-size: var(--text-48);
   }
   .program__lecture {
     display: flex;
