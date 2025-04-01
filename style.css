@@ -24,7 +24,7 @@
   --text-36: clamp(1.625rem, 2.75vw, 2.25rem); /* 30px → 36px */
   --text-48: clamp(2.25rem, 4vw, 3rem); /* 36px → 48px */
 
-  /* Spacing system */
+  /* Спэйсинг */
   --space-1: 0.25rem; /* 4px */
   --space-2: 0.5rem; /* 8px */
   --space-3: 0.75rem; /* 12px */
@@ -93,7 +93,7 @@ video {
   margin: 0 auto;
 }
 
-/* 5. Component styles grouped with their media queries */
+/* 5. Компоненты */
 /* Header component */
 .header {
   margin-top: var(--space-7);
@@ -177,7 +177,7 @@ video {
 .header__nav-link:hover {
   color: var(--color-accent);
 }
-/* Animated underline effect */
+/* Эффект подчеркивания */
 .header__nav-link::after {
   content: '';
   position: absolute;
@@ -227,7 +227,7 @@ video {
 .menu__nav-link:hover {
   color: var(--color-accent);
 }
-/* Animated underline effect */
+/* Эффект подчеркивания */
 .menu__nav-link::after {
   content: '';
   position: absolute;
@@ -654,7 +654,7 @@ video {
   background: var(--color-white);
 }
 
-/* 6. Layout adjustments with media queries */
+/* 6. Медиа запросы */
 
 @media (min-width: 48rem) {
   body {
@@ -691,21 +691,20 @@ video {
     align-items: center;
     gap: var(--space-3);
   }
+  .main__flex {
+    padding: 2.5rem;
+  }
+  .menu__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
   .discount__content {
     align-self: flex-start;
   }
 
   .discount__video {
     max-width: 470px;
-  }
-  .main__flex {
-    padding: 2.5rem;
-  }
-  /* Menu */
-  .menu__nav-list {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
   }
 
   .course-flex {
