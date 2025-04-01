@@ -678,6 +678,9 @@ video {
   .main__description {
     font-size: var(--text-48);
   }
+  .menu {
+    font-size: var(--text-36);
+  }
   .program__lecture {
     display: flex;
     align-items: center;
@@ -753,6 +756,9 @@ video {
   }
   .header__nav-list {
     gap: var(--space-7);
+  }
+  .menu {
+    font-size: var(--text-48);
   }
   .main__cta-button-container {
     margin-bottom: 5.5rem;
