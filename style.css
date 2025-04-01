@@ -98,7 +98,7 @@ video {
 .header {
   margin-top: var(--space-7);
   margin-bottom: 72px;
-  font-size: var(--text-18);
+  font-size: 12px;
   font-weight: var(--font-bold);
   color: var(--color-dark);
 }
@@ -150,7 +150,6 @@ video {
   padding: 0 var(--space-4);
   color: var(--color-light);
   background-color: rgba(0, 0, 0, 0.2);
-  font-size: 18px;
   z-index: 10;
   transition: right 300ms ease-out;
 }
@@ -723,40 +722,53 @@ video {
     gap: var(--space-6);
     margin-bottom: var(--space-8);
   }
-}
-
-@media (min-width: 62.5rem) {
-  .discount__flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-7);
-  }
-  .main__cta-button-container {
-    margin-bottom: 5.5rem;
-  }
-}
-
-@media (min-width: 75rem) {
   .header__nav {
     color: var(--color-dark);
     display: flex;
     position: static;
     width: 100%;
     height: auto;
-    margin-left: 95px;
+    margin-left: 0;
     padding: 0;
     background-color: transparent;
     justify-content: space-between;
   }
   .header__nav-list {
     display: flex;
-    gap: var(--space-7);
+    gap: var(--space-3);
     align-self: flex-start;
   }
   .header #open-navbar-button,
   #close-navbar-button {
     display: none;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .header {
+    font-size: 14px;
+  }
+  .header__nav-list {
+    gap: var(--space-7);
+  }
+  .main__cta-button-container {
+    margin-bottom: 5.5rem;
+  }
+
+  .discount__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-7);
+  }
+}
+
+@media (min-width: 75rem) {
+  .header {
+    font-size: 18px;
+  }
+  .header__nav {
+    margin-left: 95px;
   }
   .course__description {
     margin-bottom: var(--space-10);
@@ -771,6 +783,6 @@ video {
 
 @media (min-width: 92rem) {
   .container {
-    width: 75%;
+    width: 83%;
   }
 }
