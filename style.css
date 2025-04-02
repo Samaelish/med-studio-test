@@ -252,9 +252,6 @@ video {
 .main {
   color: var(--color-white);
 }
-.main__content {
-  width: 50%;
-}
 .main__flex {
   padding: var(--space-5);
   border-radius: var(--rounded-lg);
@@ -693,6 +690,9 @@ video {
   }
   .main__flex {
     padding: 2.5rem;
+  }
+  .main__content {
+    width: 50%;
   }
   .menu__nav-list {
     display: flex;
