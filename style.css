@@ -252,7 +252,7 @@ video {
 .main__flex {
   padding: var(--space-5);
   border-radius: var(--rounded-lg);
-  background-image: url(assets/img/main-bg.png);
+  background-image: image-set(url(assets/img/main-bg.webp), url(assets/img/main-bg.png));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
