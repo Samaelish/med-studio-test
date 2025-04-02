@@ -4,7 +4,6 @@
   --color-primary: #4299e1;
   --color-accent: #40b526;
   --color-accent-dark: #348842;
-  --color-final-icon: #3b64a1;
   --color-dark: #252d33;
   --color-text-secondary: #4b5563;
   --color-gray: #94a9b7;
@@ -98,7 +97,7 @@ video {
 .header {
   margin-top: var(--space-7);
   margin-bottom: 72px;
-  font-size: 12px;
+  font-size: var(--text-24);
   font-weight: var(--font-bold);
   color: var(--color-dark);
 }
@@ -202,9 +201,7 @@ video {
 }
 
 .header__dropdown-icon {
-  display: inline-block;
   margin-left: var(--space-2);
-  color: var(--color-accent);
   transform: rotate(180deg);
   transition: all 0.2s ease-in;
 }
@@ -368,9 +365,6 @@ video {
 .main__payment-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
-.main__payment-button i {
-  margin-right: var(--space-2);
-}
 
 /* Course Program component */
 .course {
@@ -381,7 +375,6 @@ video {
   font-size: var(--text-18);
   margin-bottom: var(--space-5);
 }
-
 .program {
   margin-bottom: var(--space-3);
 }
@@ -402,10 +395,14 @@ video {
   margin-bottom: var(--space-6);
   cursor: pointer;
 }
+.program__section-title::selection {
+  background: transparent;
+  color: inherit;
+  text-shadow: none;
+}
 .program__section-icon {
-  color: var(--color-accent);
   transform: rotate(-180deg);
-  transition: all 0.1s ease-in;
+  transition: all 0.2s linear;
 }
 .program__section-icon--rotated {
   transform: rotate(0deg);
@@ -436,12 +433,9 @@ video {
 }
 .program__lecture-icon {
   position: absolute;
-  right: 0.625rem;
-  bottom: 0.625rem;
-  font-size: var(--text-24);
-  color: var(--color-white);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  transform: translate(-30%, -40%);
 }
 .program__lecture-title {
   font-size: var(--text-18);
@@ -453,9 +447,6 @@ video {
   border: 0.0625rem solid var(--color-gray);
   border-radius: var(--rounded-xl);
   font-weight: var(--font-bold);
-}
-.program__final i {
-  color: var(--color-final-icon);
 }
 .program__final-description {
   color: var(--color-gray);
@@ -500,8 +491,7 @@ video {
 }
 .course__payment-link {
   color: var(--color-accent);
-  text-decoration: none;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
 }
 .course__payment-link:hover {
   color: var(--color-dark);
@@ -526,14 +516,13 @@ video {
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .course__payment-button:hover {
   background-color: var(--color-accent-dark);
 }
-.course__payment-button i {
-  margin-right: var(--space-2);
+.course__payment-button svg {
+  flex-shrink: 0; /* Prevent SVG from shrinking */
 }
 .course__payment-promo {
   display: block;
@@ -541,7 +530,6 @@ video {
   font-size: var(--text-18);
   font-weight: var(--font-bold);
   text-align: center;
-  text-decoration: none;
   transition: color 0.1s ease-in;
 }
 .course__payment-promo:hover {
@@ -629,8 +617,7 @@ video {
   place-items: center;
 }
 .sponsors__logo {
-  width: 100%;
-  border-radius: 1.5625rem;
+  max-width: 100%;
 }
 
 /* Partners component */
@@ -657,6 +644,9 @@ video {
   body {
     line-height: 1.4;
   }
+  .header {
+    font-size: 12px;
+  }
   .main__flex {
     display: flex;
     align-items: center;
@@ -667,10 +657,6 @@ video {
     justify-content: center;
     align-items: center;
     width: 50%;
-  }
-  .main__logo {
-    width: 100%;
-    max-width: 350px;
   }
   .main__description {
     font-size: var(--text-48);
