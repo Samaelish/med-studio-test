@@ -96,7 +96,7 @@ video {
 /* Header component */
 .header {
   margin-top: var(--space-7);
-  margin-bottom: 72px;
+  margin-bottom: 4.5rem;
   font-size: var(--text-24);
   font-weight: var(--font-bold);
   color: var(--color-dark);
@@ -215,7 +215,7 @@ video {
   color: var(--color-dark);
   font-size: var(--text-48);
   font-weight: var(--font-bold);
-  margin-bottom: 34px;
+  margin-bottom: 2.125rem;
 }
 .menu__nav-link {
   position: relative;
@@ -261,7 +261,7 @@ video {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
   margin-bottom: 1.875rem;
 }
 .main__book-number {
@@ -412,7 +412,7 @@ video {
 }
 .program__lecture {
   position: relative;
-  margin-bottom: 52px;
+  margin-bottom: 3.25rem;
 }
 .program__lecture::after {
   content: '';
@@ -420,7 +420,7 @@ video {
   bottom: -26px;
   left: 0;
   right: 0;
-  height: 0.0625rem;
+  height: 1px;
   background-color: var(--color-line);
 }
 .program__lecture-video-container {
@@ -442,8 +442,7 @@ video {
   font-weight: var(--font-bold);
 }
 .program__final {
-  padding: var(--space-7);
-  padding: 25px 23px 21px;
+  padding: 1.5625rem 1.4375rem 1.3125rem;
   border: 0.0625rem solid var(--color-gray);
   border-radius: var(--rounded-xl);
   font-weight: var(--font-bold);
@@ -475,7 +474,7 @@ video {
 .course__payment {
   width: 100%;
   max-width: 20rem;
-  padding: 24px 30px;
+  padding: 1.5rem 1.875rem;
   background-color: var(--color-white);
   border-radius: var(--rounded-md);
 }
@@ -538,7 +537,7 @@ video {
 
 /* Discount component */
 .discount {
-  padding: 41px 0;
+  padding: 2.5625rem 0;
   margin-bottom: 5rem;
   background: var(--color-dark);
   color: var(--color-gray);
@@ -552,7 +551,7 @@ video {
 .discount__title {
   color: var(--color-white);
   font-size: var(--text-36);
-  margin-bottom: 21px;
+  margin-bottom: 1.3125rem;
 }
 
 .discount__description {
@@ -569,10 +568,10 @@ video {
 
 /* Speakers component */
 .speakers {
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 .speakers__title {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 .speakers__cards {
   display: grid;
@@ -602,10 +601,10 @@ video {
 
 /* Sponsors component */
 .sponsors {
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 .sponsors__title {
-  margin-bottom: 34px;
+  margin-bottom: 2.125rem;
 }
 .sponsors__cards {
   display: grid;
@@ -622,10 +621,10 @@ video {
 
 /* Partners component */
 .partners {
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 .partners__title {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 .partners__cards {
   display: grid;
@@ -645,7 +644,7 @@ video {
     line-height: 1.4;
   }
   .header {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .main__flex {
     display: flex;
@@ -737,7 +736,7 @@ video {
 
 @media (min-width: 62.5rem) {
   .header {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .header__nav-list {
     gap: var(--space-7);
@@ -759,7 +758,7 @@ video {
 
 @media (min-width: 75rem) {
   .header {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .header__nav {
     margin-left: 95px;
