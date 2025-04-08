@@ -15,7 +15,7 @@ document.querySelectorAll('.program__section-title').forEach(title => {
 // Адаптивное и доступное меню навигации
 const openButton = document.getElementById('open-navbar-button') // Кнопка открытия меню
 const closeButton = document.getElementById('close-navbar-button') // Кнопка закрытия меню
-const menuOverlay = document.getElementById('overlay')
+const menuOverlay = document.getElementById('overlay') // Оверлей для закрытия кликом снаружи
 const navbar = document.querySelector('nav') // Контейнер навигации
 const navLinks = document.querySelectorAll('nav a') // Все ссылки в меню
 
